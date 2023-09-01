@@ -20,7 +20,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to EC2
-        uses: https://github.com/vibrantsudarshan/DarkAndBeautiful-ReactUI@v0.4.0
+        uses: https://github.com/vibrantsudarshan/DarkAndBeautiful-ReactUI@v2
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
