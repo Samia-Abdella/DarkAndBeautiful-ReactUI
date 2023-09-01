@@ -20,7 +20,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to EC2
-        #uses: appleboy/ssh-action@v0.4.0
+        uses: ssh -i "ChatGPT3Demo.pem" ubuntu@ec2-3-87-175-38.compute-1.amazonaws.com
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
